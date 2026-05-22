@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5f5;
+}
+
+class-header {
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+.Header-logo {
+    align-items: center;
+    width: 1500%;
+}
+
+.class-contact {
+    text-align: right;
+    margin-right: 40px;
+    margin-top: -100px;
+}
+
+.class-contact h2 {
+    color: #a40a0a;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+p {
+    color: #0c0b0b;
+    font-size: 25px;
+}
+
+.class-Number {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.class-About {
+    margin-top: 10px;
+    margin-bottom: 1000px;
+}
+
+.class-Navbar {
+    display: flex;
+    justify-content: center;
+    background: #5a0202;
+    padding: 20px 0;
+    gap: 50px;
+    align-items: end;
+
+
+}
+
+.class-Navbar p {
+    color: #faf7f7;
+    font-size: 18px;
+    font-weight: bold;
+    float: right;
+    active: #3d3b3b;
+}
+
+/* Main Layout */
+.class-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+.class-main img {
+    /* flex: 1; */
+    /* image takes available space */
+    width: 150%;
+    /* responsive image */
+    height: 150%;
+    align-items: start;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+
+.class-form img {
+    /* flex: 1; */
+    /* image takes available space */
+    width: 150%;
+    /* responsive image */
+    height: 150%;
+    gap: 3px;
+    align-items: end;
+}
+
+/* .class-main form {
+     position: relative;
+     flex: 1;
+     /* form takes available space */
+/* display: flex;
+     flex-direction: column;
+     gap: 15px;
+     spacing between inputs
+ }
+
+ .text-block {
+     position: absolute;
+ } */
+
+/* class-form img {} */
+
+/* Form Section */
+.class-question {
+    background-color: #a40a0a;
+    height: 50px;
+    width: 210px;
+    text-align: center;
+}
+
+form-section {
+    width: 521px;
+    /* set form width */
+    height: 321px;
+    padding: 20px;
+    /* spacing inside */
+    /* background-image: url("images/bg.jpg"); */
+    background-size: cover;
+    /* scale image to cover form */
+    background-position: center;
+    /* center the image */
+    background-repeat: no-repeat;
+    /* prevent tiling */
+    color: #fff;
+    /* text color for readability */
+
+}
+
+.form-section {
+    flex: 1;
+    background: #eee;
+    padding: 2rem;
+    position: relative;
+}
+
+/* .form-section h2 {
+     margin-bottom: 1rem;
+     color: #b30000;
+ } */
+
+.form-section input,
+.form-section textarea {
+    width: 30%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+}
+
+.form-section textarea {
+    width: 60%;
+    height: 60%;
+}
+
+.form-section button {
+    width: 70%;
+    padding: 0.75rem;
+    background: #b30000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+footer class-social {
+    align-items: left;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
