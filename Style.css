@@ -1,0 +1,550 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* Header */
+.class-header {
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+.class-logoimg img {
+    align-items: center;
+    width: 50%;
+}
+
+.class-contact {
+    text-align: right;
+    margin-right: 40px;
+    margin-top: -160px;
+}
+
+.class-contact h2 {
+    color: #a40a0a;
+    font-size: 30px;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    margin-top: 10px;
+    /* margin-bottom: -px; */
+}
+
+.class-contact h3 {
+    color: #0c0b0b;
+    font-size: 70px;
+    font-weight: bolder;
+    margin-top: -10px;
+    margin-bottom: -30px;
+    text-decoration: rgb(49, 47, 47) overline;
+
+
+}
+
+p {
+    font-size: 27px;
+    color: #0c0b0b;
+    margin-top: -30px;
+}
+
+/* newwwww */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    justify-content: right;
+    margin: 0;
+    padding: 0;
+    color: rgb(243, 235, 235);
+    font-size: 25px;
+    font-weight: normal;
+    cursor: pointer;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    background-color: #4a0303;
+    max-width: 1590px;
+
+}
+
+ul li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    background-color: #312f2f;
+}
+
+
+.nav-link {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    color: #edeff3;
+    transition: all 0.2s ease;
+    color: white !important;
+
+}
+
+
+/* Main Banner & Form */
+.class-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 3px auto;
+    /* max-width: 1200px; */
+    gap: 4px;
+}
+
+.class-img {
+    flex: 1 60%;
+    /* take equal space */
+}
+
+.class-img img {
+    width: 90%;
+    /* fill container width */
+    height: 90%;
+    /* fill container height */
+    object-fit: cover;
+    /* keep proportions */
+    margin-top: 50px;
+    margin-left: 70px;
+
+}
+
+
+/* Right child (form) */
+
+.class-form {
+    flex: 1 45%;
+    /* take equal space */
+    background: url("images/form_bg.jpg") no-repeat center;
+    background-size: cover;
+    padding: 20px;
+    border: 2px solid #ccc;
+    height: 470px;
+    /* increase height */
+    margin-top: 50px;
+    margin-right: 70px;
+
+}
+
+.class-form h1 {
+    color: #c9c1c1;
+    background: #b22222;
+    text-align: center;
+    margin-top: -20px;
+    margin-left: -20px;
+    width: 40%;
+    height: 10%;
+}
+
+.class-enter {
+    color: #010000;
+    font-size: 22px;
+    line-height: 1.3;
+    margin-top: 10px;
+}
+
+.class-strong {
+    /* display: flex;
+    justify-content: center; */
+    text-align: right;
+    margin-right: -0px;
+}
+
+.class-have {
+    color: #010000;
+    font-size: 30px;
+    margin-top: -40px;
+    margin-left: 250px;
+    margin-right: -10px;
+
+
+
+}
+
+.class-have1 {
+    color: #010000;
+    font-size: 30px;
+    margin-top: -50px;
+    margin-left: 360px;
+    margin-right: -10px;
+    font-weight: bolder;
+    color: rgb(15, 15, 79);
+
+
+
+}
+
+.class-have2 {
+    color: #010000;
+    font-size: 25px;
+    margin-top: -15px;
+    margin-left: 250px;
+    margin-right: -10px;
+
+
+
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    /* vertically center label & input */
+    gap: 10px;
+    /* space between label and input */
+    margin-bottom: 15px;
+}
+
+.form-inline {
+    margin-left: 10px;
+}
+
+.class-form label {
+    display: block;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.class-form input {
+    vertical-align: middle;
+
+    width: 30%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #aaa;
+}
+
+.class-form textarea {
+    width: 90%;
+    height: 10%;
+    margin-top: 10px;
+
+}
+
+textarea::placeholder {
+    color: black;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.class-button {
+    display: flex;
+    gap: 2px;
+    justify-content: space-around;
+
+}
+
+.class-form button {
+    height: 50px;
+    width: 330px;
+    font-size: 25px;
+    background: #b22222;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.class-form button:hover {
+    background: #8b1a1a;
+}
+
+form h2 {
+    color: #010000;
+    font-size: 20px;
+    font-family: italic;
+    opacity: 0.4;
+
+}
+
+.class-guranted {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+}
+
+.class-confiedential {
+    text-align: right;
+    font-size: 50px;
+    margin-top: -280px;
+    margin-left: 100px;
+    margin-right: 30px;
+    margin-bottom: 300px;
+    rotate: 20deg;
+}
+
+.class-confiedential img {
+    width: 60%;
+}
+
+
+
+/* Section Blocks */
+.class-charged {
+    display: flex;
+    /* justify-content: stretch; */
+    gap: 10px;
+    padding: 30px;
+}
+
+/* SECTION CHARGED BUTTON */
+.class-charged button {
+    background: #b22222;
+    color: white;
+    padding: 8px 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    cursor: pointer;
+}
+
+/* DUI SECTION */
+.class-dui {
+    flex: 1 20%;
+
+}
+
+.class-help {
+    display: flex;
+    flex flex-direction: row;
+    gap: 3px;
+}
+
+.class-help img {
+    width: 10%;
+    height: 5%;
+    margin-left: 20px;
+}
+
+.class-shadowimg {
+    height: 5%;
+    width: 10%;
+    /* padding: 8px 16px;
+    margin-top: 10px; */
+}
+
+.class-charged button:hover {
+    background: #8b1a1a;
+}
+
+
+.class-dui button text {
+    font-size: 12px;
+    font-weight: bold;
+    align-items: center;
+}
+
+.class-scary {
+    font-size: 16px
+}
+
+/* LAW BLOG SECTION */
+.div class-blog {
+    flex: 2 50%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.div class-Nawards {
+    flex: 1 30%;
+
+}
+
+.class-Nawards h2 {
+    color: #0f0d0d;
+    font-size: 30px;
+
+
+}
+
+.class-Nawards h3 {
+    color: #6e0303;
+    font-size: 30px;
+    margin-top: -15px;
+
+
+}
+
+.class-klf {
+    line-height: 1.5;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.class-charged div {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Practice Areas */
+.class-practice {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+
+}
+
+/* .class-practice-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}  */
+
+/* .class-Area {
+    display: flex;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+    background: #6f6e6e;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-left: 20px;
+    color: white;
+    width: 280px;
+    cursor: pointer;
+    box-shadow: inset;
+} */
+
+/* Red stripe on the left */
+/* .class-Area class-stripe {
+    width: 20px;
+    height: 20%;
+    margin-right: 2px;
+    /* border-radius: 2px; */
+}
+
+
+/* .class-Area h2 {
+    color: #eae3e3;
+    text-align: left;
+    /* margin-bottom: 10px; */
+
+}
+
+*/
+/* .class-Area p {
+    font-weight: bold;
+    text-align: right;
+    cursor: pointer;
+} */
+
+/* Button */
+/* .class-Area button {
+    background: #b22222;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer; */
+}
+
+/* 
+.class-Area button:hover {
+    background: #8b1a1a;
+}
+
+
+.class-title {
+    /* flex: 1; */
+}
+
+.div class-client {
+    /* flex: 1; */
+}
+
+.class-shadow img {
+    /* width: 140%;
+    /* reduce width, try 40–60% */
+    height: 5%;
+    */
+    /* keep proportions */
+    display: block;
+    margin: 10px auto;
+    /* center it */
+}
+
+*/
+/* 
+.class-Sbutton {
+    background: #b22222;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 160px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+} */
+/* 
+.class-footeraward {
+    align-items: right;
+}
+
+/* Footer */
+/* .class-social {
+    color: white;
+    text-align: right;
+    padding: 20px;
+} */
+*/
+/* 
+.class-social h1 {
+    margin-bottom: 10px;
+}
+
+.class-social img {
+    width: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+} */
+/* 
+.class-social img:hover {
+    transform: scale(1.1);
+} */
+
+/* Responsive */
+@media (max-width: 768px) {
+    .class-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .class-form {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .class-Navbar {
+        flex-wrap: wrap;
+    }
+}
+
+*/
