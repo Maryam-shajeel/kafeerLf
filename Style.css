@@ -320,11 +320,13 @@ form h2 {
     cursor: pointer;
     border: none;
     cursor: pointer;
+
 }
 
 /* DUI SECTION */
 .class-dui {
-    flex: 1 20%;
+    flex: 1;
+    width: fit-content;
 
 }
 
@@ -372,7 +374,8 @@ form h2 {
 
 
 .div class-Nawards {
-    flex: 1 30%;
+    flex: 1 20%;
+    border: 10px solid #4f0808;
 
 }
 
@@ -405,130 +408,207 @@ form h2 {
 /* Practice Areas */
 .class-practice {
     display: flex;
-    justify-content: space-between;
-    gap: 5px;
+    /* gap: 5px; */
+    flex-direction: row;
 
 }
 
-/* .class-practice-header {
+.class-practice-header {
+    flex: 1 30%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}  */
+    gap: 10px;
+}
 
-/* .class-Area {
-    display: flex;
-    align-items: center;
-    height: 20%;
-    width: 100%;
+.class-practice-header h1 {
+    font-size: 18;
+
+
+}
+
+
+/* CLASS AREAA */
+.class-Area {
     background: #6f6e6e;
-    border: 1px solid #ddd;
+    border-left: 10px solid #4f0808;
     padding: 15px;
     margin-left: 20px;
     color: white;
-    width: 280px;
     cursor: pointer;
     box-shadow: inset;
-} */
-
-/* Red stripe on the left */
-/* .class-Area class-stripe {
-    width: 20px;
-    height: 20%;
-    margin-right: 2px;
-    /* border-radius: 2px; */
+    width: 80%;
+    height: 10%;
 }
 
-
-/* .class-Area h2 {
+/* speeeding ticket  */
+.class-Area h2 {
     color: #eae3e3;
     text-align: left;
     /* margin-bottom: 10px; */
 
 }
 
-*/
-/* .class-Area p {
+/* AREA button learn more */
+.class-learn-more {
     font-weight: bold;
+    font-size: 14px;
     text-align: right;
     cursor: pointer;
-} */
-
-/* Button */
-/* .class-Area button {
-    background: #b22222;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 4px;
-    cursor: pointer; */
 }
 
-/* 
-.class-Area button:hover {
+
+.class-learn-more :hover {
     background: #8b1a1a;
 }
 
 
 .class-title {
-    /* flex: 1; */
+    flex: 3 60%;
 }
 
-.div class-client {
-    /* flex: 1; */
+.class-title h1 {
+    font-size: 30px;
+    font-family: italic;
 }
+
+.class-title p {
+    font-size: 18px;
+    color: rgb(111, 108, 108);
+
+}
+
+
+/* CLASS CLIENTT */
+.class-client {
+    flex: 1 15%;
+
+}
+
+.class-client h1 {
+    font-family: italic;
+    font-size: 28px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+
+.class-client p {
+    font-size: 19px;
+    line-height: 20px;
+    /* margin-top: 1px; */
+}
+
+
 
 .class-shadow img {
-    /* width: 140%;
-    /* reduce width, try 40–60% */
     height: 5%;
-    */
     /* keep proportions */
     display: block;
     margin: 10px auto;
     /* center it */
 }
 
-*/
-/* 
 .class-Sbutton {
     background: #b22222;
     color: white;
     border: none;
     padding: 8px 16px;
-    margin-top: 10px;
+    margin-top: -8px;
+    margin-bottom: 30px;
+    margin-right: 5px;
+    margin-left: 50px;
     cursor: pointer;
-    width: 160px;
+    width: 60%;
+    height: 4%;
     text-align: left;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
-} */
-/* 
-.class-footeraward {
-    align-items: right;
+    position: relative;
+    z-index: 2;
+    /* Button on top */
+}
+
+.class-line {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(78, 75, 75);
+    margin-top: 10px;
+}
+
+/* AWARDSSSS */
+.class-iconline {
+    margin-right: -100px;
+    margin-left: 1350px;
+    width: 9%;
+    height: 1px;
+    background-color: rgb(78, 75, 75);
+    margin-top: 10px;
+}
+
+.class-awardb img {
+
+    margin-right: 10px;
+    margin-left: 70px;
+
+}
+
+.class-menu {
+    margin-top: -300px;
+    margin-bottom: 200px;
+
+}
+
+.class-menu h1 {
+    font-family: italic;
+    margin-left: 30px;
+}
+
+.class-menu h2 {
+    /* opacity: 0.0; */
+    margin-left: 90PX;
+    margin-top: 50PX;
+    color: #9f9898;
+
 }
 
 /* Footer */
-/* .class-social {
-    color: white;
-    text-align: right;
-    padding: 20px;
-} */
-*/
-/* 
-.class-social h1 {
-    margin-bottom: 10px;
+.class-footer {
+    margin-top: -90px;
+    margin-bottom: 40px;
 }
 
-.class-social img {
-    width: 40px;
-    margin: 0 10px;
-    cursor: pointer;
-} */
-/* 
-.class-social img:hover {
-    transform: scale(1.1);
-} */
+.class-footer h1 {
+    margin-right: 50px;
+    font-family: italic;
+    font-size: 17px;
+    text-align: right;
+
+}
+
+.class-cimg img {
+    align-items: right;
+    /* height: 80%;
+    width: 5%; */
+
+}
+
+.class-shadow {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    /* justify-content: flex-end; */
+    /* Push to the right */
+    align-items: right;
+    width: fit-content;
+    /*  take space needed */
+    padding-right: 20px;
+    /* Add padding from right edge */
+    margin-left: 1350px;
+    margin-right: -10;
+
+
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -546,5 +626,3 @@ form h2 {
         flex-wrap: wrap;
     }
 }
-
-*/
