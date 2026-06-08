@@ -10,9 +10,9 @@ body {
     line-height: 1.6;
     background: #f5f5f5;
     color: #333;
-    border-left: 10px #6f6e6e;
-    border-right: 10px #6f6e6e;
-    border-bottom: 10prgb(74, 5, 5)6e;
+    border-left: 8px solid rgb(98, 95, 95);
+    border-right: 10px solid rgb(98, 95, 95);
+    bottom: 15px rgb(123, 8, 8);
 
 
 }
@@ -318,9 +318,13 @@ form h2 {
     /* justify-content: space-evenly; */
     flex-wrap: nowrap;
     gap: 0;
-    padding: 40px;
     align-items: flex-start;
     flex-direction: row;
+}
+
+.class-charged div {
+    padding: 8px;
+    text-align: center;
 }
 
 /* SECTION CHARGED BUTTON */
@@ -343,91 +347,106 @@ form h2 {
 /* DUI SECTION */
 
 .class-dui {
-    flex: 1 25%;
-    padding: 20px;
-    padding-right: 40px;
+    flex: 1;
+    padding: 10px;
     text-align: left;
     width: 50%;
 }
 
 .class-help img {
-    width: 80%;
-    height: 80%;
+    margin-top: -40px;
+    margin-left: 100px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    width: 40%;
+    height: 120%;
     align-items: center;
 
 }
 
-.class-shadowi img {
-    height: 5%;
-    width: 10%;
-    margin-bottom: -1px;
-    /* padding: 8px 16px; */
-    margin-top: 7px;
+.class-dui-line {
+    margin-left: 160px;
+    margin-right: 0px;
+    width: 200px;
+    margin-top: 0px;
+    margin-bottom: -10px;
+
+    border-bottom: 2px solid grey;
 }
 
+
 .class-dui button {
-    width: 32%;
+    width: 30%;
     height: 1%;
-    margin: 0;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    margin-left: 60px;
+    margin-right: -20px;
+
 
 
 }
 
 .class-dui button text {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
     align-items: center;
+    margin-top: 5px;
 }
 
 .dui-h1 {
     font-family: italic;
-    margin-top: 40px;
-    margin-bottom: -20px;
+    font-size: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    line-height: 1.1;
+    margin-left: 80px;
+    margin-right: 0px;
+
+
 }
 
-.class-help h2 {
-    margin-top: 3px;
-    margin-bottom: 30px;
-    font-size: 16px;
+.class-case {
+    font-size: 18px;
+    margin-left: 0px;
+    margin-right: 60.5px;
     color: rgb(141, 12, 12);
-    font-family: sans-serif;
-    /* line-height: 1.2; */
+    width: 200%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .class-scary {
-    font-size: 16px;
+    margin-left: 80px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    color: #2a2929;
     line-height: 1;
+    width: 190%;
+    text-align: left;
 }
 
 /* limnes of Dui Section */
-.class-charged {
-    border: 3px solid #080506;
-}
+.class-charged {}
 
 /* first box line dui */
 .class-dui {
-    border: 2px solid #9597de;
     width: 50%;
 }
 
 .dui-line {
-    border: 3px solid #3a1ec4;
     width: 100%;
 }
 
 /* paragrapg and image */
 .case-line {
-    border: 3px solid #ca6c15;
     width: 50%;
 }
 
 .board-line {
     width: 50%;
-    border: 3px solid #ca6c15;
 }
 
 .class-lineb {
-    border: 3px solid #3a1ec4;
     width: 100%;
     /* height: 10%; */
 
@@ -438,7 +457,6 @@ form h2 {
     display: flex;
     flex-direction: row;
     gap: 3px;
-    border: 3px solid #3a1ec4;
     width: 100%;
 
 
@@ -451,7 +469,7 @@ form h2 {
 /* LAW BLOG SECTION */
 .class-blog {
     flex: 1;
-    padding: 20px;
+    padding: 0px;
     padding-left: 40px;
     padding-right: 40px;
     text-align: left;
@@ -470,6 +488,10 @@ form h2 {
     margin: 0px;
     /* padding-bottom: 30px; */
     border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+
+
 }
 
 .blog-item:last-child {
@@ -545,44 +567,54 @@ form h2 {
 
 .class-Nawards {
     flex: 1;
-    padding: 20px;
-    padding-left: 40px;
-    text-align: center;
+    padding-top: 0px;
+    text-align: left;
     border: none;
     width: 50%;
+    margin-left: 50px;
 
 }
 
 .class-awardimg {
+    margin-left: 30px;
+
     display: flex;
+    margin-top: 40px;
+
 }
 
 .class-award-certi {
     align-items: left;
+    margin-top: 5px;
 
 }
 
 .class-Nawards h2 {
     color: #0f0d0d;
+    font-family: italic serif;
     font-size: 30px;
     line-height: 1.2;
+    text-align: left;
+
 }
 
 .class-klf {
     text-align: left;
     line-height: 1.5;
     margin-top: -20px;
-    /* margin-bottom: 30px; */
     font-size: 18px;
     width: 200%;
-    /* margin-top: -20;
-    margin-bottom: 90px; */
 }
 
-.class-charged div {
-    padding: 20px;
-    text-align: center;
+.class-nward-line {
+    margin-left: 100px;
+    margin-right: -20px;
+    width: 200px;
+    margin-top: 2px;
+    margin-bottom: 0px;
+    border-bottom: 2px solid grey;
 }
+
 
 /* Practice Areas */
 .class-practice {
@@ -597,10 +629,12 @@ form h2 {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 50%;
 }
 
 .class-practice-header h1 {
     font-size: 18;
+    margin-left: 20px;
 
 
 }
@@ -608,7 +642,7 @@ form h2 {
 
 /* CLASS AREAA */
 .class-Area {
-    background: #6f6e6e;
+    background: #837b7b;
     border-left: 10px solid #4f0808;
     padding: 15px;
     margin-left: 20px;
@@ -648,11 +682,15 @@ form h2 {
 .class-page h1 {
     font-size: 30px;
     font-family: italic;
+    width: 50%;
 }
 
-.class-title p {
+.class-page p {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 20px;
     font-size: 18px;
-    color: rgb(111, 108, 108);
+    color: rgb(81, 79, 79);
 
 }
 
@@ -660,6 +698,7 @@ form h2 {
 /* CLASS CLIENTT */
 .class-client {
     flex: 1 15%;
+    width: 50%;
 
 }
 
@@ -803,5 +842,230 @@ form h2 {
 
     .class-Navbar {
         flex-wrap: wrap;
+    }
+
+    /* CLIENT SECTION RESPONSIVE  */
+
+    /* Tablet - Large (1024px - 1199px) */
+    @media (max-width: 1199px) {
+        .class-client {
+            flex: 1 20%;
+            padding: 15px;
+        }
+
+        .class-client h1 {
+            font-size: 24px;
+            line-height: 20px;
+        }
+
+        .class-client p {
+            font-size: 16px;
+        }
+
+        .class-Sbutton {
+            width: 80%;
+            font-size: 12px;
+            padding: 6px 12px;
+            margin-left: 30px;
+        }
+
+        .class-line {
+            margin-top: 8px;
+        }
+    }
+
+    /* Tablet - Medium (768px - 1023px) */
+    @media (max-width: 1023px) {
+        .class-client {
+            flex: 1 25%;
+            padding: 12px;
+        }
+
+        .class-client h1 {
+            font-size: 20px;
+            line-height: 18px;
+            margin-bottom: 5px;
+        }
+
+        .class-client p {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        .class-Sbutton {
+            width: 100%;
+            font-size: 11px;
+            padding: 5px 10px;
+            margin-left: 0;
+            margin-bottom: 15px;
+        }
+
+        .class-line {
+            height: 1px;
+            margin-top: 5px;
+            margin-bottom: 8px;
+        }
+
+        .class-awardb {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .class-awardb img {
+            width: 50px;
+            height: 50px;
+            margin: 0;
+        }
+    }
+
+    /* Mobile - Large (600px - 767px) */
+    @media (max-width: 767px) {
+        .class-client {
+            flex: 1 100%;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .class-client h1 {
+            font-size: 18px;
+            line-height: 16px;
+            margin-bottom: 3px;
+        }
+
+        .class-client p {
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 8px;
+        }
+
+        .class-Sbutton {
+            width: 100%;
+            font-size: 12px;
+            padding: 8px 10px;
+            margin: 0 auto 15px auto;
+            display: block;
+        }
+
+        .class-line {
+            width: 100%;
+            height: 1px;
+            margin-top: 8px;
+            margin-bottom: 10px;
+        }
+
+        .class-awardb {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .class-awardb img {
+            width: 60px;
+            height: 60px;
+            margin: 0;
+        }
+
+        .class-awardb br {
+            display: none;
+        }
+    }
+
+    /* Mobile - Small (below 600px) */
+    @media (max-width: 599px) {
+        .class-client {
+            flex: 1 100%;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .class-client h1 {
+            font-size: 14px;
+            line-height: 14px;
+            margin-bottom: 2px;
+        }
+
+        .class-client p {
+            font-size: 11px;
+            line-height: 14px;
+            margin-bottom: 6px;
+        }
+
+        .class-Sbutton {
+            width: 100%;
+            font-size: 11px;
+            padding: 6px 8px;
+            margin: 0 auto 10px auto;
+            display: block;
+            height: auto;
+        }
+
+        .class-Sbutton img {
+            width: 12px;
+            height: 12px;
+        }
+
+        .class-line {
+            width: 100%;
+            height: 1px;
+            margin-top: 6px;
+            margin-bottom: 8px;
+        }
+
+        .class-awardb {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .class-awardb img {
+            width: 40px;
+            height: 40px;
+            margin: 0;
+        }
+
+        .class-awardb br {
+            display: none;
+        }
+    }
+
+    /* Extra Small (below 400px) */
+    @media (max-width: 399px) {
+        .class-client {
+            flex: 1 100%;
+            padding: 6px;
+        }
+
+        .class-client h1 {
+            font-size: 12px;
+            line-height: 12px;
+        }
+
+        .class-client p {
+            font-size: 10px;
+            line-height: 12px;
+        }
+
+        .class-Sbutton {
+            width: 100%;
+            font-size: 10px;
+            padding: 5px 6px;
+            margin: 0 auto 8px auto;
+        }
+
+        .class-line {
+            margin-top: 4px;
+            margin-bottom: 6px;
+        }
+
+        .class-awardb img {
+            width: 35px;
+            height: 35px;
+        }
     }
 }
