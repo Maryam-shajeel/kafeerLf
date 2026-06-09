@@ -633,12 +633,31 @@ form h2 {
 }
 
 .class-practice-header h1 {
-    font-size: 18;
+    font-size: 30px;
+    font-family: italic;
     margin-left: 20px;
-
+    width: 200%;
 
 }
 
+.class-menu {
+    margin-top: 30px;
+
+}
+
+.class-menu h1 {
+    font-family: italic;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.class-menu h2 {
+    /* opacity: 0.0; */
+    margin-left: 90PX;
+    margin-top: 50PX;
+    color: #9f9898;
+
+}
 
 /* CLASS AREAA */
 .class-Area {
@@ -649,8 +668,8 @@ form h2 {
     color: white;
     cursor: pointer;
     box-shadow: inset;
-    width: 80%;
-    height: 10%;
+    width: 300px;
+    height: 70px;
 }
 
 /* speeeding ticket  */
@@ -699,6 +718,7 @@ form h2 {
 .class-client {
     flex: 1 15%;
     width: 50%;
+    margin-left: 50px;
 
 }
 
@@ -731,7 +751,7 @@ form h2 {
     color: white;
     border: none;
     padding: 8px 16px;
-    margin-top: -8px;
+    margin-top: -2px;
     margin-bottom: 30px;
     margin-right: 5px;
     margin-left: 50px;
@@ -747,86 +767,68 @@ form h2 {
 }
 
 .class-line {
-    width: 100%;
+    margin-right: 0px;
+    width: 250px;
     height: 2px;
     background-color: rgb(78, 75, 75);
     margin-top: 10px;
 }
 
 /* AWARDSSSS */
-.class-iconline {
-    margin-right: -100px;
-    margin-left: 1350px;
-    width: 9%;
-    height: 1px;
-    background-color: rgb(78, 75, 75);
-    margin-top: 10px;
-}
-
 .class-awardb img {
-
-    margin-right: 10px;
+    display: flex;
+    margin-right: 5px;
     margin-left: 70px;
 
 }
 
-.class-menu {
-    margin-top: -300px;
-    margin-bottom: 200px;
-
-}
-
-.class-menu h1 {
-    font-family: italic;
-    margin-left: 30px;
-}
-
-.class-menu h2 {
-    /* opacity: 0.0; */
-    margin-left: 90PX;
-    margin-top: 50PX;
-    color: #9f9898;
-
-}
 
 /* Footer */
 .class-footer {
-    margin-top: -90px;
-    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px 40px;
+    background-color: #f5f5f5;
+    min-height: 150px;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .class-footer h1 {
-    margin-right: 50px;
+    margin-right: 16px;
+    font-size: 30px;
+    font-weight: bold;
     font-family: italic;
-    font-size: 17px;
+    width: 100%;
     text-align: right;
-
 }
 
-.class-cimg img {
-    align-items: right;
-    /* height: 80%;
-    width: 5%; */
+.class-footer>div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+    gap: 5px;
+}
 
+.class-iconline {
+    margin-top: 0;
+    width: 200px;
+    height: 2px;
+    background-color: #333;
 }
 
 .class-shadow {
     display: flex;
     flex-direction: row;
     gap: 5px;
-    /* justify-content: flex-end; */
-    /* Push to the right */
-    align-items: right;
-    width: fit-content;
-    /*  take space needed */
-    padding-right: 20px;
-    /* Add padding from right edge */
-    margin-left: 1350px;
-    margin-right: -10;
-
-
+    align-items: center;
 }
 
+.class-shadow img {
+    width: 35px;
+    height: 35px;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
