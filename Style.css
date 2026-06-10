@@ -32,15 +32,21 @@ body {
     gap: 5px;
 }
 
-.class-logoimg img {
+.class-cont img {
     align-items: center;
-    width: 50%;
+    width: 150%;
+}
+
+.class-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .class-contact {
-    text-align: right;
-    margin-right: 40px;
-    margin-top: -160px;
+    margin-top: 5px;
+    margin-right: 20px;
 }
 
 .class-contact h2 {
@@ -49,7 +55,6 @@ body {
     font-family: sans-serif;
     letter-spacing: 3px;
     margin-top: 10px;
-    /* margin-bottom: -px; */
 }
 
 .class-contact h3 {
@@ -59,8 +64,6 @@ body {
     margin-top: -10px;
     margin-bottom: -30px;
     text-decoration: rgb(49, 47, 47) overline;
-
-
 }
 
 p {
@@ -167,12 +170,20 @@ ul li a:hover {
     height: 10%;
 }
 
+.class-have2 {
+    padding-top: 0px;
+    padding-bottom: 40px;
+
+
+}
+
 .class-enter {
     color: #010000;
     font-size: 22px;
     line-height: 1.3;
-    margin-top: 10px;
+    margin-top: 0px;
 }
+
 
 .class-strong {
     /* display: flex;
@@ -182,46 +193,53 @@ ul li a:hover {
 }
 
 .class-have {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-right: 40px;
     color: #010000;
-    font-size: 30px;
-    margin-top: -40px;
-    margin-left: 250px;
-    margin-right: -10px;
-
-
 
 }
 
-.class-have1 {
-    color: #010000;
+.class-have p {
     font-size: 30px;
-    margin-top: -50px;
-    margin-left: 360px;
-    margin-right: -10px;
-    font-weight: bolder;
-    color: rgb(15, 15, 79);
+    line-height: 1.1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
 
+.blue-ques {
+    color: rgb(8, 8, 63);
+}
 
+/* flex of confidential and form */
+.class-formconf {
+    display: flex;
+    gap: 3px;
+}
+
+.class-confiedential {
+    align-items: center;
+    font-size: 50px;
+    margin-top: 50px;
+    /* margin-left: 60px;
+    margin-right: 40px; */
 
 }
 
-.class-have2 {
-    color: #010000;
-    font-size: 25px;
-    margin-top: -15px;
-    margin-left: 250px;
-    margin-right: -10px;
-
-
-
+.class-formconf img {
+    transform: rotate(20deg);
+    width: 230px;
+    right: 20px;
+    top: 20px;
 }
 
 .form-group {
     display: flex;
     align-items: center;
-    /* vertically center label & input */
     gap: 10px;
-    /* space between label and input */
     margin-bottom: 15px;
 }
 
@@ -237,17 +255,18 @@ ul li a:hover {
 
 .class-form input {
     vertical-align: middle;
-
-    width: 30%;
+    height: 30px;
+    width: 200px;
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #aaa;
 }
 
 .class-form textarea {
-    width: 90%;
-    height: 10%;
+    width: 180%;
+    height: 30%;
     margin-top: 10px;
+    margin-left: 20px;
 
 }
 
@@ -255,6 +274,7 @@ textarea::placeholder {
     color: black;
     font-size: 16px;
     font-family: sans-serif;
+    padding: 10px;
 }
 
 .class-button {
@@ -296,19 +316,7 @@ form h2 {
     gap: 4px;
 }
 
-.class-confiedential {
-    text-align: right;
-    font-size: 50px;
-    margin-top: -280px;
-    margin-left: 100px;
-    margin-right: 30px;
-    margin-bottom: 300px;
-    rotate: 20deg;
-}
 
-.class-confiedential img {
-    width: 60%;
-}
 
 
 
@@ -831,243 +839,407 @@ form h2 {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-    .class-main {
-        flex-direction: column;
-        align-items: center;
+@media (max-width: 1199px) {
+
+    /* Large tablet / small desktop tweaks */
+    .class-logoimg img {
+        width: 140px;
+        height: auto;
+    }
+
+    .class-contact h2 {
+        font-size: 20px;
+    }
+
+    .class-contact h3 {
+        font-size: 34px;
     }
 
     .class-form {
-        width: 90%;
-        margin-top: 20px;
+        margin-right: 40px;
+        max-width: 520px;
     }
 
-    .class-Navbar {
+    .class-blog-item-image {
+        flex: 0 0 180px;
+        min-width: 180px;
+    }
+
+    .class-client {
+        padding: 15px;
+    }
+
+    .class-Sbutton {
+        width: 80%;
+        font-size: 12px;
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 1023px) {
+
+    /* Tablets / landscape phones */
+    .class-header,
+    .class-Header {
+        height: auto;
+        padding: 12px 16px;
+    }
+
+    .class-cont {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .nav-menu {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 8px;
+    }
+
+    .class-main {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        align-items: flex-start;
+        margin: 12px auto;
+        padding: 0 16px;
+    }
+
+    .class-img {
+        flex: 1 1 60%;
+        min-width: 300px;
+    }
+
+    .class-img img {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .class-form {
+        flex: 1 1 38%;
+        max-width: 460px;
+        margin-top: 20px;
+        margin-right: 0;
+        height: auto;
+    }
+
+    .class-formconf {
+        flex-direction: row;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .form-group {
+        flex: 1;
+    }
+
+    .class-form textarea {
+        width: 100%;
+        min-height: 140px;
+        margin-left: 0;
+    }
+
+    .class-form input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .class-charged {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
         flex-wrap: wrap;
     }
 
-    /* CLIENT SECTION RESPONSIVE  */
-
-    /* Tablet - Large (1024px - 1199px) */
-    @media (max-width: 1199px) {
-        .class-client {
-            flex: 1 20%;
-            padding: 15px;
-        }
-
-        .class-client h1 {
-            font-size: 24px;
-            line-height: 20px;
-        }
-
-        .class-client p {
-            font-size: 16px;
-        }
-
-        .class-Sbutton {
-            width: 80%;
-            font-size: 12px;
-            padding: 6px 12px;
-            margin-left: 30px;
-        }
-
-        .class-line {
-            margin-top: 8px;
-        }
+    .class-dui,
+    .class-blog,
+    .class-Nawards {
+        flex: 1 1 calc(33% - 12px);
+        min-width: 220px;
+        width: auto;
+        margin-left: 0;
+        padding: 12px;
     }
 
-    /* Tablet - Medium (768px - 1023px) */
-    @media (max-width: 1023px) {
-        .class-client {
-            flex: 1 25%;
-            padding: 12px;
-        }
-
-        .class-client h1 {
-            font-size: 20px;
-            line-height: 18px;
-            margin-bottom: 5px;
-        }
-
-        .class-client p {
-            font-size: 14px;
-            line-height: 18px;
-        }
-
-        .class-Sbutton {
-            width: 100%;
-            font-size: 11px;
-            padding: 5px 10px;
-            margin-left: 0;
-            margin-bottom: 15px;
-        }
-
-        .class-line {
-            height: 1px;
-            margin-top: 5px;
-            margin-bottom: 8px;
-        }
-
-        .class-awardb {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 10px;
-        }
-
-        .class-awardb img {
-            width: 50px;
-            height: 50px;
-            margin: 0;
-        }
+    .blog-item {
+        flex-direction: row;
     }
 
-    /* Mobile - Large (600px - 767px) */
-    @media (max-width: 767px) {
-        .class-client {
-            flex: 1 100%;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .class-client h1 {
-            font-size: 18px;
-            line-height: 16px;
-            margin-bottom: 3px;
-        }
-
-        .class-client p {
-            font-size: 12px;
-            line-height: 16px;
-            margin-bottom: 8px;
-        }
-
-        .class-Sbutton {
-            width: 100%;
-            font-size: 12px;
-            padding: 8px 10px;
-            margin: 0 auto 15px auto;
-            display: block;
-        }
-
-        .class-line {
-            width: 100%;
-            height: 1px;
-            margin-top: 8px;
-            margin-bottom: 10px;
-        }
-
-        .class-awardb {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            margin-top: 15px;
-            flex-wrap: wrap;
-        }
-
-        .class-awardb img {
-            width: 60px;
-            height: 60px;
-            margin: 0;
-        }
-
-        .class-awardb br {
-            display: none;
-        }
+    .class-blog-item-image {
+        flex: 0 0 140px;
+        min-width: 140px;
     }
 
-    /* Mobile - Small (below 600px) */
-    @media (max-width: 599px) {
-        .class-client {
-            flex: 1 100%;
-            padding: 8px;
-            text-align: center;
-        }
-
-        .class-client h1 {
-            font-size: 14px;
-            line-height: 14px;
-            margin-bottom: 2px;
-        }
-
-        .class-client p {
-            font-size: 11px;
-            line-height: 14px;
-            margin-bottom: 6px;
-        }
-
-        .class-Sbutton {
-            width: 100%;
-            font-size: 11px;
-            padding: 6px 8px;
-            margin: 0 auto 10px auto;
-            display: block;
-            height: auto;
-        }
-
-        .class-Sbutton img {
-            width: 12px;
-            height: 12px;
-        }
-
-        .class-line {
-            width: 100%;
-            height: 1px;
-            margin-top: 6px;
-            margin-bottom: 8px;
-        }
-
-        .class-awardb {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 10px;
-            flex-wrap: wrap;
-        }
-
-        .class-awardb img {
-            width: 40px;
-            height: 40px;
-            margin: 0;
-        }
-
-        .class-awardb br {
-            display: none;
-        }
+    .class-practice {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        align-items: flex-start;
+        flex-wrap: wrap;
     }
 
-    /* Extra Small (below 400px) */
-    @media (max-width: 399px) {
-        .class-client {
-            flex: 1 100%;
-            padding: 6px;
-        }
+    .class-practice-header {
+        flex: 1 0 35%;
+        min-width: 220px;
+    }
 
-        .class-client h1 {
-            font-size: 12px;
-            line-height: 12px;
-        }
+    .class-page {
+        flex: 1 0 40%;
+        min-width: 260px;
+    }
 
-        .class-client p {
-            font-size: 10px;
-            line-height: 12px;
-        }
+    .class-client {
+        flex: 1 0 25%;
+        min-width: 160px;
+        margin-left: 0;
+    }
+}
 
-        .class-Sbutton {
-            width: 100%;
-            font-size: 10px;
-            padding: 5px 6px;
-            margin: 0 auto 8px auto;
-        }
+@media (max-width: 767px) {
 
-        .class-line {
-            margin-top: 4px;
-            margin-bottom: 6px;
-        }
+    /* Mobile large */
+    .class-header,
+    .class-Header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 12px;
+        height: auto;
+    }
 
-        .class-awardb img {
-            width: 35px;
-            height: 35px;
-        }
+    .class-cont {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-menu {
+        justify-content: center;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .class-main {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin: 12px;
+        padding: 0;
+    }
+
+    .class-img img {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .class-form {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 0;
+        padding: 14px;
+        height: auto;
+        border-width: 1px;
+    }
+
+    .class-form h1 {
+        width: 100%;
+        margin: 0 0 12px 0;
+    }
+
+    .class-formconf {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .class-confiedential {
+        margin-top: 6px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .class-formconf img {
+        transform: none;
+        width: 140px;
+        margin: 0 auto;
+    }
+
+    .class-form input,
+    .class-form textarea {
+        width: 100%;
+    }
+
+    .class-form button {
+        width: 100%;
+        font-size: 16px;
+        height: 44px;
+    }
+
+    .class-charged {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 6px;
+    }
+
+    .class-dui,
+    .class-blog,
+    .class-Nawards {
+        width: 100%;
+        padding: 12px;
+        margin-left: 0;
+    }
+
+    .blog-item {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .class-blog-item-image {
+        width: 100%;
+        min-width: auto;
+        flex: none;
+    }
+
+    .class-Area {
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+    }
+
+    .class-client {
+        width: 100%;
+        margin-left: 0;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .class-Sbutton {
+        width: 100%;
+        margin-left: 0;
+        display: block;
+    }
+
+    .class-line {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .class-awardimg {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .class-awardb img {
+        margin-left: 0;
+        display: inline-block;
+    }
+
+    .class-footer {
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .class-footer h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 599px) {
+
+    /* Mobile medium / small phones */
+    .class-logoimg img {
+        width: 110px;
+    }
+
+    .class-contact h2 {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .class-contact h3 {
+        font-size: 24px;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .class-form h1 {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    .class-form textarea {
+        min-height: 100px;
+    }
+
+    .class-blog-item-text h1 {
+        font-size: 20px;
+    }
+
+    .class-blog-item-text p {
+        font-size: 14px;
+    }
+
+    .class-Sbutton {
+        font-size: 12px;
+        padding: 8px 10px;
+        width: 100%;
+    }
+
+    .class-shadow img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .class-awardb img {
+        width: 40px;
+        height: 40px;
+        margin: 0 6px;
+    }
+}
+
+@media (max-width: 399px) {
+
+    /* Extra small */
+    .class-logoimg img {
+        width: 90px;
+    }
+
+    .class-contact h3 {
+        font-size: 20px;
+    }
+
+    .class-contact h2 {
+        font-size: 13px;
+    }
+
+    .class-form input,
+    .class-form textarea {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .class-Area h2 {
+        font-size: 16px;
+    }
+
+    .class-client h1 {
+        font-size: 14px;
+    }
+
+    .class-client p {
+        font-size: 12px;
+    }
+
+    .class-line {
+        margin-top: 4px;
+        margin-bottom: 6px;
     }
 }
