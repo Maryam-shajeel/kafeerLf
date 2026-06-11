@@ -12,8 +12,7 @@ body {
     color: #333;
     border-left: 8px solid rgb(98, 95, 95);
     border-right: 10px solid rgb(98, 95, 95);
-    bottom: 15px rgb(123, 8, 8);
-
+    border-bottom: 15px solid rgb(123, 8, 8);
 
 }
 
@@ -21,23 +20,30 @@ body {
     color: rgb(123, 8, 8);
 }
 
-/* Header */
-/* .class-header {
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header
+.class-header {
     width: 100%;
     height: 80px;
     background: #fff;
-    /* display: flex;
+    display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    gap: 5px; */
+    gap: 5px;
 }
+*/
 
-*/ .class-cont img {
-    align-items: center;
+.class-cont img {
+    display: block;
     width: auto;
-    max-width: 150%;
+    max-width: 100%;
+    height: auto;
 }
 
 .class-cont {
@@ -57,12 +63,11 @@ body {
     font-size: 30px;
     font-family: sans-serif;
     letter-spacing: 3px;
-    /* margin-top: 2rem; */
 }
 
 .class-contact h3 {
     color: #0c0b0b;
-    font-size: 70px;
+    font-size: 4rem;
     font-weight: bolder;
     margin-top: -10px;
     margin-bottom: -30px;
@@ -72,21 +77,22 @@ body {
 p {
     font-size: 27px;
     color: #0c0b0b;
-    margin-top: -30px;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 /* newwwww */
 .nav-menu {
     display: flex;
-    gap: 20px;
-    justify-content: right;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-end;
     margin: 0;
     padding: 0;
     color: rgb(243, 235, 235);
     font-size: 25px;
     font-weight: normal;
     cursor: pointer;
-    margin: 0;
 }
 
 ul {
@@ -122,45 +128,46 @@ ul li a:hover {
 /* Main Banner & Form */
 .class-main {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: stretch;
-    margin: 3px auto;
-    /* max-width: 1200px; */
-    gap: 4px;
+    margin: 20px auto;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.class-img,
+.class-form {
+    flex: 1 1 320px;
+    min-width: 280px;
 }
 
 .class-img {
-    flex: 1 60%;
     /* take equal space */
 }
 
 .class-img img {
-    width: 90%;
-    /* fill container width */
-    height: 90%;
-    /* fill container height */
+    width: 100%;
+    height: auto;
     object-fit: cover;
-    /* keep proportions */
     margin-top: 50px;
-    margin-left: 70px;
-
+    margin-left: 0;
 }
 
 
 /* Right child (form) */
 
 .class-form {
-    flex: 1 45%;
+    flex: 1 1 320px;
     /* take equal space */
     background: url("images/form_bg.jpg") no-repeat center;
     background-size: cover;
     padding: 20px;
     border: 2px solid #ccc;
-    height: 470px;
-    /* increase height */
+    min-height: 470px;
+    height: auto;
     margin-top: 50px;
-    margin-right: 70px;
-
+    margin-right: 0;
 }
 
 .class-form h1 {
@@ -258,19 +265,19 @@ ul li a:hover {
 
 .class-form input {
     vertical-align: middle;
-    height: 30px;
-    width: 200px;
+    height: 40px;
+    width: 100%;
+    max-width: 100%;
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #aaa;
 }
 
 .class-form textarea {
-    width: 90%;
-    height: 30%;
+    width: 100%;
+    min-height: 150px;
     margin-top: 10px;
-    margin-left: 20px;
-
+    margin-left: 0;
 }
 
 textarea::placeholder {
@@ -306,7 +313,7 @@ textarea::placeholder {
 form h2 {
     color: #010000;
     font-size: 20px;
-    font-family: italic;
+    font-style: italic;
     opacity: 0.4;
 
 }
@@ -406,7 +413,7 @@ form h2 {
 }
 
 .dui-h1 {
-    font-family: italic;
+    font-style: italic;
     font-size: 30px;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -437,9 +444,7 @@ form h2 {
 }
 
 /* limnes of Dui Section */
-.class-charged {}
 
-/* first box line dui */
 .class-dui {
     width: 50%;
 }
@@ -475,8 +480,6 @@ form h2 {
 
 
 
-.
-
 /* LAW BLOG SECTION */
 .class-blog {
     flex: 1;
@@ -497,7 +500,6 @@ form h2 {
     align-items: flex-start;
     gap: 0px;
     margin: 0px;
-    /* padding-bottom: 30px; */
     border-bottom: 1px solid #ccc;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
@@ -517,7 +519,7 @@ form h2 {
 }
 
 .class-blog-item-text h1 {
-    font-family: italic;
+    font-style: italic;
     font-size: 30px;
     color: #333;
     margin-bottom: 10px;
@@ -588,7 +590,6 @@ form h2 {
 
 .class-awardimg {
     margin-left: 30px;
-
     display: flex;
     margin-top: 40px;
 
@@ -645,7 +646,7 @@ form h2 {
 
 .class-practice-header h1 {
     font-size: 30px;
-    font-family: italic;
+    font-style: italic;
     margin-left: 20px;
     width: 200%;
 
@@ -657,7 +658,7 @@ form h2 {
 }
 
 .class-menu h1 {
-    font-family: italic;
+    font-style: italic;
     margin-left: 20px;
     font-size: 30px;
 }
@@ -700,7 +701,7 @@ form h2 {
 }
 
 
-.class-learn-more :hover {
+.class-learn-more:hover {
     background: #8b1a1a;
 }
 
@@ -711,7 +712,7 @@ form h2 {
 
 .class-page h1 {
     font-size: 30px;
-    font-family: italic;
+    font-style: italic;
     width: 50%;
 }
 
@@ -734,7 +735,7 @@ form h2 {
 }
 
 .class-client h1 {
-    font-family: italic;
+    font-style: italic;
     font-size: 28px;
     line-height: 25px;
     margin-bottom: 10px;
@@ -809,7 +810,7 @@ form h2 {
     margin-right: 16px;
     font-size: 30px;
     font-weight: bold;
-    font-family: italic;
+    font-style: italic;
     width: 100%;
     text-align: right;
 }
