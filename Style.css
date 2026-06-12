@@ -1,1249 +1,1046 @@
-/* Reset & Base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* =========================
+   CONTAINER
+========================= */
+/* .site-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .15);
+} */
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f3f3;
     color: #333;
-    border-left: 8px solid rgb(98, 95, 95);
-    border-right: 10px solid rgb(98, 95, 95);
-    border-bottom: 15px solid rgb(123, 8, 8);
-
-}
-
-.red-elements {
-    color: rgb(123, 8, 8);
 }
 
 img {
     max-width: 100%;
-    height: auto;
-}
-
-/* Header
-.class-header {
-    width: 100%;
-    height: 80px;
-    background: #fff;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    gap: 5px;
-}
-*/
-
-.class-cont img {
     display: block;
-    width: auto;
-    max-width: 100%;
-    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================
+   HEADER
+========================= */
+.class-header {
+    background: #fff;
 }
 
 .class-cont {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    gap: 10px;
+    align-items: center;
+    padding: 20px 30px;
+
 }
 
-.class-contact {
-    margin-top: 0rem;
-    /* margin-right: 20rem; */
+.class-left img {
+    max-width: 350px;
 }
 
-.class-contact h2 {
-    color: #a40a0a;
-    font-size: 30px;
-    font-family: sans-serif;
-    letter-spacing: 3px;
+.class-right {
+    text-align: right;
 }
 
-.class-contact h3 {
-    color: #0c0b0b;
-    font-size: 4rem;
-    font-weight: bolder;
-    margin-top: -10px;
-    margin-bottom: -30px;
-    text-decoration: rgb(49, 47, 47) overline;
+.class-right h1 {
+    color: #8a0000;
+    font-size: 22px;
+    margin-bottom: 5px;
 }
 
-p {
-    font-size: 27px;
-    color: #0c0b0b;
-    margin-top: 0;
-    margin-bottom: 1rem;
+.class-right h2 {
+    font-size: 52px;
+    font-weight: bold;
+    color: #222;
 }
 
-/* newwwww */
+.class-fast {
+    color: #555;
+    font-size: 15px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
 .nav-menu {
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: flex-end;
-    margin: 0;
-    padding: 0;
-    color: rgb(243, 235, 235);
-    font-size: 25px;
-    font-weight: normal;
-    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    list-style: none;
+    background: #8b0000;
 }
 
-ul {
-    list-style-type: none;
-    background-color: #4a0303;
-    max-width: 1590px;
-
+.nav-menu li {
+    flex: 1;
+    min-width: 0;
+    /* important */
 }
 
-ul li a {
+.nav-menu li a {
     display: block;
+    text-align: center;
     color: white;
-    padding: 14px 16px;
     text-decoration: none;
+    padding: 12px 4px;
+    font-size: 16px;
+    white-space: nowrap;
 }
 
-ul li a:hover {
-    background-color: #312f2f;
+.nav-menu a:hover {
+    background: #333;
 }
 
+@media (max-width:768px) {
 
-.nav-link {
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 500;
-    color: #edeff3;
-    transition: all 0.2s ease;
-    color: white !important;
-
+    .nav-menu li a {
+        font-size: 12px;
+        padding: 10px 2px;
+    }
 }
 
+@media (max-width:480px) {
 
-/* Main Banner & Form */
+    .nav-menu li a {
+        font-size: 10px;
+        padding: 8px 1px;
+        letter-spacing: 0;
+    }
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+/* =========================
+   HERO SECTION (MAIN)
+========================= */
+/* =========================
+   HERO SECTION (MAIN)
+========================= */
 .class-main {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    /* side by side layout */
+    flex-direction: row;
+    justify-content: space-between;
     align-items: stretch;
-    margin: 20px auto;
-    max-width: 1200px;
+    /* equal height for both sides */
     gap: 20px;
+    padding: 20px;
 }
 
 .class-img,
 .class-form {
-    flex: 1 1 320px;
-    min-width: 280px;
+    flex: 0 0 50%;
+    /* equal width halves */
+    max-width: 50%;
+    box-sizing: border-box;
 }
 
-.class-img {
-    /* take equal space */
-}
-
+/* Image fills its half completely */
 .class-img img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    /* match parent height */
     object-fit: cover;
-    margin-top: 50px;
-    margin-left: 0;
+    /* fill space neatly */
+    display: block;
 }
 
-
-/* Right child (form) */
-
+/* Form with background image */
 .class-form {
-    flex: 1 1 320px;
-    /* take equal space */
-    background: url("images/form_bg.jpg") no-repeat center;
+    background: url("images/form_bg.jpg") no-repeat center center;
     background-size: cover;
+    /* scale background to fill */
+    border: 1px solid #ccc;
     padding: 20px;
-    border: 2px solid #ccc;
-    min-height: 470px;
-    height: auto;
-    margin-top: 50px;
-    margin-right: 0;
-}
-
-.class-form h1 {
-    color: #c9c1c1;
-    background: #b22222;
-    text-align: center;
-    margin-top: -20px;
-    margin-left: -20px;
-    width: 40%;
-    height: 10%;
-}
-
-.class-have2 {
-    padding-top: 0px;
-    padding-bottom: 40px;
-
-
-}
-
-.class-enter {
-    color: #010000;
-    font-size: 22px;
-    line-height: 1.3;
-    margin-top: 0px;
+    color: #030202;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
-.class-strong {
-    /* display: flex;
-    justify-content: center; */
-    text-align: right;
-    margin-right: -0px;
+.class-question {
+    background: #8f0000;
+    color: #fff;
+    padding: 15px;
+    font-size: 28px;
 }
 
 .class-have {
-    display: flex;
-    justify-content: flex-end;
-    padding: 0px;
-    margin-top: 0px;
-    margin-bottom: 5px;
-    margin-right: 40px;
-    color: #010000;
-
+    padding: 15px;
 }
 
 .class-have p {
-    font-size: 30px;
-    line-height: 1.1;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
     font-weight: bold;
 }
 
 .blue-ques {
-    color: rgb(8, 8, 63);
+    color: #0a346f;
 }
 
-/* flex of confidential and form */
-.class-formconf {
-    display: flex;
-    gap: 3px;
+.class-have2 {
+    padding: 15px;
 }
 
-.class-confiedential {
-    align-items: center;
-    font-size: 50px;
-    margin-top: 50px;
-    /* margin-left: 60px;
-    margin-right: 40px; */
-
-}
-
-.class-formconf img {
-    transform: rotate(20deg);
-    width: 230px;
-    right: 20px;
-    top: 20px;
+.class-enter {
+    margin-bottom: 15px;
+    font-size: 14px;
 }
 
 .form-group {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.form-inline {
-    margin-left: 10px;
-}
-
-.class-form label {
-    display: block;
-    margin-left: 10px;
+.form-group label {
+    width: 80px;
     font-weight: bold;
+    font-size: 13px;
 }
 
-.class-form input {
-    vertical-align: middle;
-    height: 40px;
-    width: 100%;
-    max-width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #aaa;
-}
-
-.class-form textarea {
-    width: 100%;
-    min-height: 150px;
-    margin-top: 10px;
-    margin-left: 0;
-}
-
-textarea::placeholder {
-    color: black;
-    font-size: 16px;
-    font-family: sans-serif;
+.form-group input {
+    flex: 1;
     padding: 10px;
+    border: 1px solid #bbb;
 }
 
-.class-button {
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bbb;
+    resize: none;
+}
+
+.class-formconf {
     display: flex;
-    gap: 2px;
-    justify-content: space-around;
-
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.class-form button {
-    height: 50px;
-    width: 330px;
-    font-size: 25px;
-    background: #b22222;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-.class-form button:hover {
-    background: #8b1a1a;
-}
-
-form h2 {
-    color: #010000;
-    font-size: 20px;
-    font-style: italic;
-    opacity: 0.4;
-
+.class-confiedential img {
+    transform: rotate(20deg);
+    width: 120px;
 }
 
 .class-guranted {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    gap: 4px;
+    margin-top: 15px;
+}
+
+.class-guranted h2 {
+    font-size: 14px;
+    color: #777;
+    font-style: italic;
+}
+
+.class-guranted button {
+    background: #b10000;
+    color: #fff;
+    padding: 12px 20px;
+    font-weight: bold;
+}
+
+/* Responsive tweaks */
+@media (max-width:768px) {
+    .class-main {
+        min-height: 60vh;
+        /* shrink height a bit */
+        gap: 8px;
+        padding: 8px;
+    }
+}
+
+@media (max-width:480px) {
+    .class-main {
+        min-height: 60vh;
+        gap: 5px;
+        padding: 5px;
+    }
+}
+
+@media (max-width:1024px) {
+    .class-main {
+        min-height: 60vh;
+        gap: 5px;
+        padding: 10px;
+    }
 }
 
 
 
 
-
-/* Section Blocks */
+/* =========================
+   3 BOX SECTION
+========================= */
+/* =========================
+   CHARGED SECTION
+========================= */
 .class-charged {
     display: flex;
-    /* justify-content: space-evenly; */
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+    padding: 20px;
     flex-wrap: nowrap;
-    gap: 0;
-    align-items: flex-start;
-    flex-direction: row;
+    font-family: italic;
+    /* keep side by side always */
 }
 
-.class-charged div {
-    padding: 8px;
-    text-align: center;
-}
-
-/* SECTION CHARGED BUTTON */
-.class-charged button {
-    background: #b22222;
-    color: white;
-    padding: 8px 16px;
-    margin-top: -10px;
-    cursor: pointer;
-    border: none;
-    cursor: pointer;
-
-
-}
-
-.class-charged button:hover {
-    background: #8b1a1a;
-}
-
-/* DUI SECTION */
-
-.class-dui {
-    flex: 1;
-    padding: 10px;
-    text-align: left;
-    width: 50%;
-}
-
-.class-help img {
-    margin-top: -40px;
-    margin-left: 100px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    width: 40%;
-    height: 120%;
-    align-items: center;
-
-}
-
-.class-dui-line {
-    margin-left: 160px;
-    margin-right: 0px;
-    width: 200px;
-    margin-top: 0px;
-    margin-bottom: -10px;
-
-    border-bottom: 2px solid grey;
-}
-
-
-.class-dui button {
-    width: 30%;
-    height: 1%;
-    margin-top: 0px;
-    margin-bottom: 50px;
-    margin-left: 60px;
-    margin-right: -20px;
-
-
-
-}
-
-.class-dui button text {
-    font-size: 15px;
-    font-weight: bold;
-    align-items: center;
-    margin-top: 5px;
-}
-
-.dui-h1 {
-    font-style: italic;
-    font-size: 30px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    line-height: 1.1;
-    margin-left: 80px;
-    margin-right: 0px;
-
-
-}
-
-.class-case {
-    font-size: 18px;
-    margin-left: 0px;
-    margin-right: 60.5px;
-    color: rgb(141, 12, 12);
-    width: 200%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.class-scary {
-    margin-left: 80px;
-    margin-bottom: 0px;
-    font-size: 18px;
-    color: #2a2929;
-    line-height: 1;
-    width: 190%;
-    text-align: left;
-}
-
-/* limnes of Dui Section */
-
-.class-dui {
-    width: 50%;
-}
-
-.dui-line {
-    width: 100%;
-}
-
-/* paragrapg and image */
-.case-line {
-    width: 50%;
-}
-
-.board-line {
-    width: 50%;
-}
-
-.class-lineb {
-    width: 100%;
-    /* height: 10%; */
-
-}
-
-/* clipboard of dui */
-.class-help {
-    display: flex;
-    flex-direction: row;
-    gap: 3px;
-    width: 100%;
-
-
-}
-
-
-
-/* LAW BLOG SECTION */
-.class-blog {
-    flex: 1;
-    padding: 0px;
-    padding-left: 40px;
-    padding-right: 40px;
-    text-align: left;
+/* Each block */
+.class-dui,
+.class-blog,
+.class-Nawards {
+    flex: 1 1 0;
+    background: #fff;
+    padding: 15px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    width: 50%;
-
+    justify-content: space-between;
+    border: 1px solid #ccc;
 }
 
-.blog-item {
+/* DUI block */
+.class-dui .class-help {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 0px;
-    margin: 0px;
-    border-bottom: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-
-
+    gap: 15px;
 }
 
-.blog-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
+.class-dui .case-line {
+    flex: 1;
+}
+
+.class-dui .board-line {
+    flex: 0 0 100px;
+}
+
+.class-dui .class-lineb {
+    margin-top: auto;
+}
+
+/* Blog block: text left, image right */
+.class-blog .blog-item {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
 }
 
 .class-blog-item-text {
     flex: 1;
-    text-align: left;
-    min-width: 0;
-}
-
-.class-blog-item-text h1 {
-    font-style: italic;
-    font-size: 30px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.class-blog-item-text h1 .red {
-    color: #c41e3a;
-}
-
-.class-blog-item-text p {
-    font-size: 20px;
-    color: #151313;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.class-blog-item-text hr {
-    width: 80%;
-    border: none;
-    border-top: 2px solid #999;
-    margin: 15px 0;
 }
 
 .class-blog-item-image {
-    flex: 0 0 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 250px;
+    flex: 0 0 100px;
 }
-
-.class-blog-item-image img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.class-law-line {
-    border-bottom: 2px solid grey;
-    margin-top: -30px;
-}
-
-.class-blog button {
-    background: #c41e3a;
-    color: white;
-    margin-top: -10px;
-    cursor: pointer;
-    border: none;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.class-blog button:hover {
-    background: #a01830;
-}
-
-/* class awardss */
 
 .class-Nawards {
-    flex: 1;
-    padding-top: 0px;
-    text-align: left;
-    border: none;
-    width: 50%;
-    margin-left: 50px;
-
+    text-align: center;
 }
 
 .class-awardimg {
-    margin-left: 30px;
     display: flex;
-    margin-top: 40px;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
 
+.class-awardimg img {
+    max-width: 80px;
 }
 
 .class-award-certi {
-    align-items: left;
-    margin-top: 5px;
-
+    margin-bottom: 15px;
 }
 
-.class-Nawards h2 {
-    color: #0f0d0d;
-    font-family: italic serif;
-    font-size: 30px;
-    line-height: 1.2;
-    text-align: left;
-
-}
-
-.class-klf {
-    text-align: left;
-    line-height: 1.5;
-    margin-top: -20px;
+/* Buttons */
+/* Charged Section Buttons */
+.class-charged button,
+.class-Sbutton {
+    display: inline-flex;
+    /* text + icon side by side */
+    align-items: center;
+    /* vertical alignment */
+    justify-content: center;
+    /* center text + icon */
+    gap: 10px;
+    /* space between text and icon */
+    background: #b10000;
+    /* strong red background */
+    color: #fff;
+    /* white text */
+    border: none;
+    padding: 14px 32px;
+    /* large clickable area */
     font-size: 18px;
-    width: 200%;
+    font-weight: bold;
+    /* CLICK HERE style */
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 4px;
+    /* slight rounded corners */
+    box-sizing: border-box;
+    width: auto;
+    /* desktop: auto width */
 }
 
-.class-nward-line {
-    margin-left: 100px;
-    margin-right: -20px;
-    width: 200px;
-    margin-top: 2px;
-    margin-bottom: 0px;
-    border-bottom: 2px solid grey;
+/* Hover effect */
+.class-charged button:hover,
+.class-Sbutton:hover {
+    background: #8b0000;
+    /* darker red on hover */
+}
+
+/* Icon inside button */
+.class-charged button img,
+.class-Sbutton img {
+    width: 20px;
+    /* consistent icon size */
+    height: auto;
 }
 
 
-/* Practice Areas */
+/* Icon inside button */
+.class-charged button img,
+.class-Sbutton img {
+    width: 10px;
+    /* consistent icon size */
+    height: auto;
+}
+
+
+/* =========================
+   RESPONSIVE (keep side by side)
+========================= */
+
+/* Tablet & Mobile*/
+@media (max-width:1024px) {
+    .class-charged {
+        gap: 15px;
+    }
+
+    .class-dui .board-line,
+    .class-blog-item-image {
+        flex: 0 0 80px;
+    }
+}
+
+@media (max-width:768px) {
+    .class-charged {
+        gap: 10px;
+    }
+
+    .class-dui h1,
+    .class-blog h1,
+    .class-Nawards h2 {
+        font-size: 18px;
+    }
+
+    .class-scary,
+    .class-blog-item-text p,
+    .class-klf {
+        font-size: 13px;
+    }
+}
+
+@media (max-width:480px) {
+    .class-charged {
+        gap: 8px;
+    }
+
+    .class-dui h1,
+    .class-blog h1,
+    .class-Nawards h2 {
+        font-size: 16px;
+    }
+
+    .class-scary,
+    .class-blog-item-text p,
+    .class-klf {
+        font-size: 11px;
+    }
+
+    .class-awardimg img {
+        max-width: 60px;
+    }
+}
+
+/* Tablet & Mobile: full width buttons */
+@media (max-width:768px) {
+
+    .class-charged button,
+    .class-Sbutton {
+        width: 100%;
+        height: 50%;
+        /* stretch full width */
+        font-size: 12px;
+        /* slightly smaller text */
+        padding: 12px 20px;
+    }
+
+    .class-charged button img,
+    .class-Sbutton img {
+        width: 10px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width:480px) {
+
+    .class-charged button,
+    .class-Sbutton {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    .class-charged button img,
+    .class-Sbutton img {
+        width: 16px;
+    }
+}
+
+
+
+/* =========================
+   PRACTICE SECTION
+========================= */
+
 .class-practice {
     display: flex;
-    /* gap: 5px; */
-    flex-direction: row;
-
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+    /* overflow-x: auto; */
+    /* keeps 3 columns on small screens */
 }
 
+/* LEFT COLUMN */
 .class-practice-header {
-    flex: 1 30%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 50%;
+    flex: 0 0 25%;
+    min-width: 180px;
 }
 
 .class-practice-header h1 {
-    font-size: 30px;
-    font-style: italic;
-    margin-left: 20px;
-    width: 200%;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
 
+.class-Area {
+    background: #7b7b7b;
+    color: #fff;
+    border-left: 8px solid #8b0000;
+    padding: 15px;
+    margin-bottom: 12px;
+    width: 100%;
+    height: auto;
+}
+
+.class-Area h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+/* DUI Section Learn More */
+.class-learn-more {
+    display: inline-flex;
+    /* text + icon side by side */
+    align-items: right;
+    /* vertical alignment */
+    gap: 6px;
+    /* space between text and icon */
+    font-size: 16px;
+    font-weight: bold;
+    color: #eee2e2;
+    /* red text */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Icon size */
+.class-learn-more img {
+    width: 14px;
+    height: auto;
 }
 
 .class-menu {
     margin-top: 30px;
-
 }
 
 .class-menu h1 {
-    font-style: italic;
-    margin-left: 20px;
-    font-size: 30px;
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
 .class-menu h2 {
-    /* opacity: 0.0; */
-    margin-left: 90PX;
-    margin-top: 50PX;
-    color: #9f9898;
-
+    color: #999;
+    text-align: center;
+    margin-top: 40px;
 }
 
-/* CLASS AREAA */
-.class-Area {
-    background: #837b7b;
-    border-left: 10px solid #4f0808;
-    padding: 15px;
-    margin-left: 20px;
-    color: white;
-    cursor: pointer;
-    box-shadow: inset;
-    width: 300px;
-    height: 70px;
-}
-
-/* speeeding ticket  */
-.class-Area h2 {
-    color: #eae3e3;
-    text-align: left;
-    /* margin-bottom: 10px; */
-
-}
-
-/* AREA button learn more */
-.class-learn-more {
-    font-weight: bold;
-    font-size: 14px;
-    text-align: right;
-    cursor: pointer;
-}
-
-
-.class-learn-more:hover {
-    background: #8b1a1a;
-}
-
-
-.class-title {
-    flex: 3 60%;
+/* CENTER COLUMN */
+.class-page {
+    flex: 1;
+    /* min-width: 300px; */
 }
 
 .class-page h1 {
-    font-size: 30px;
-    font-style: italic;
-    width: 50%;
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
 .class-page p {
-    margin-top: 10px;
-    margin-left: 5px;
-    margin-right: 20px;
-    font-size: 18px;
-    color: rgb(81, 79, 79);
-
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 15px;
 }
 
-
-/* CLASS CLIENTT */
+/* RIGHT COLUMN */
 .class-client {
-    flex: 1 15%;
-    width: 50%;
-    margin-left: 50px;
-
+    flex: 0 0 25%;
+    /* min-width: 180px; */
 }
 
 .class-client h1 {
-    font-style: italic;
-    font-size: 28px;
-    line-height: 25px;
+    font-size: 26px;
+    line-height: 1.2;
     margin-bottom: 10px;
 }
 
-
 .class-client p {
-    font-size: 19px;
-    line-height: 20px;
-    /* margin-top: 1px; */
-}
-
-
-
-.class-shadow img {
-    height: 5%;
-    /* keep proportions */
-    display: block;
-    margin: 10px auto;
-    /* center it */
-}
-
-.class-Sbutton {
-    background: #b22222;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    margin-top: -2px;
-    margin-bottom: 30px;
-    margin-right: 5px;
-    margin-left: 50px;
-    cursor: pointer;
-    width: 60%;
-    height: 4%;
-    text-align: left;
-    font-size: 14px;
-    font-weight: bold;
-    position: relative;
-    z-index: 2;
-    /* Button on top */
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 10px;
 }
 
 .class-line {
-    margin-right: 0px;
-    width: 250px;
-    height: 2px;
-    background-color: rgb(78, 75, 75);
-    margin-top: 10px;
-}
-
-/* AWARDSSSS */
-.class-awardb img {
-    display: flex;
-    margin-right: 5px;
-    margin-left: 70px;
-
-}
-
-
-/* Footer */
-.class-footer {
-    display: flex;
-    justify-content: flex-end;
-    padding: 40px 40px;
-    background-color: #f5f5f5;
-    min-height: 150px;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.class-footer h1 {
-    margin-right: 16px;
-    font-size: 30px;
-    font-weight: bold;
-    font-style: italic;
     width: 100%;
-    text-align: right;
-}
-
-.class-footer>div:last-of-type {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 10px;
-    gap: 5px;
-}
-
-.class-iconline {
-    margin-top: 0;
-    width: 200px;
     height: 2px;
-    background-color: #333;
+    background: #ccc;
+    margin: 10px 0;
 }
 
-.class-shadow {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    align-items: center;
+.class-Sbutton {
+    width: 100%;
+    background: #8b0000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
-.class-shadow img {
-    width: 35px;
-    height: 35px;
+.class-Sbutton:hover {
+    background: #650000;
 }
 
-/* Responsive */
-@media (max-width: 1199px) {
-
-    /* Large tablet / small desktop tweaks */
-    .class-logoimg img {
-        width: 140px;
-        height: auto;
-    }
-
-    .class-contact h2 {
-        font-size: 20px;
-    }
-
-    .class-contact h3 {
-        font-size: 34px;
-    }
-
-    .class-form {
-        margin-right: 40px;
-        max-width: 520px;
-    }
-
-    .class-blog-item-image {
-        flex: 0 0 180px;
-        min-width: 180px;
-    }
-
-    .class-client {
-        padding: 15px;
-    }
-
-    .class-Sbutton {
-        width: 80%;
-        font-size: 12px;
-        margin-left: 30px;
-    }
+.class-awardb {
+    text-align: center;
+    margin-top: 20px;
 }
 
-@media (max-width: 1023px) {
+.class-awardb img {
+    max-width: 120px;
+    margin: 10px auto;
+}
 
-    /* Tablets / landscape phones */
-    .class-header,
-    .class-Header {
-        height: auto;
-        padding: 12px 16px;
-    }
+/* =========================
+   TABLET
+========================= */
 
-    .class-cont {
-        flex-direction: row;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .nav-menu {
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 8px;
-    }
-
-    .class-main {
-        display: flex;
-        flex-direction: row;
-        gap: 16px;
-        align-items: flex-start;
-        margin: 12px auto;
-        padding: 0 16px;
-    }
-
-    .class-img {
-        flex: 1 1 60%;
-        min-width: 300px;
-    }
-
-    .class-img img {
-        width: 100%;
-        height: auto;
-        margin-top: 20px;
-        margin-left: 0;
-    }
-
-    .class-form {
-        flex: 1 1 38%;
-        max-width: 460px;
-        margin-top: 20px;
-        margin-right: 0;
-        height: auto;
-    }
-
-    .class-formconf {
-        flex-direction: row;
-        gap: 12px;
-        align-items: flex-start;
-    }
-
-    .form-group {
-        flex: 1;
-    }
-
-    .class-form textarea {
-        width: 100%;
-        min-height: 140px;
-        margin-left: 0;
-    }
-
-    .class-form input {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .class-charged {
-        display: flex;
-        flex-direction: row;
-        gap: 12px;
-        flex-wrap: wrap;
-    }
-
-    .class-dui,
-    .class-blog,
-    .class-Nawards {
-        flex: 1 1 calc(33% - 12px);
-        min-width: 220px;
-        width: auto;
-        margin-left: 0;
-        padding: 12px;
-    }
-
-    .blog-item {
-        flex-direction: row;
-    }
-
-    .class-blog-item-image {
-        flex: 0 0 140px;
-        min-width: 140px;
-    }
+@media (max-width:992px) {
 
     .class-practice {
-        display: flex;
-        flex-direction: row;
-        gap: 12px;
-        align-items: flex-start;
-        flex-wrap: wrap;
+        gap: 15px;
     }
 
     .class-practice-header {
-        flex: 1 0 35%;
-        min-width: 220px;
+        flex: 0 0 28%;
+        min-width: 160px;
+    }
+
+    .class-client {
+        flex: 0 0 28%;
+        min-width: 160px;
     }
 
     .class-page {
-        flex: 1 0 40%;
+        min-width: 250px;
+    }
+
+    .class-page h1 {
+        font-size: 28px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:768px) {
+
+    .class-practice {
+        gap: 10px;
+        overflow-x: auto;
+    }
+
+    .class-practice-header {
+        flex: 0 0 180px;
+    }
+
+    .class-page {
+        flex: 1;
+        min-width: 280px;
+    }
+
+    .class-client {
+        flex: 0 0 180px;
+    }
+
+    .class-page h1 {
+        font-size: 24px;
+    }
+
+    .class-page p {
+        font-size: 14px;
+    }
+
+    .class-client h1 {
+        font-size: 20px;
+    }
+
+    .class-client p {
+        font-size: 13px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width:480px) {
+
+    .class-practice {
+        padding: 10px;
+    }
+
+    .class-practice-header {
+        flex: 0 0 160px;
+    }
+
+    .class-page {
         min-width: 260px;
     }
 
     .class-client {
-        flex: 1 0 25%;
-        min-width: 160px;
-        margin-left: 0;
+        flex: 0 0 160px;
     }
 }
 
-@media (max-width: 767px) {
+/* =========================
+   FOOTER
+========================= */
 
-    /* Mobile large */
-    .class-header,
-    .class-Header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        padding: 12px;
-        height: auto;
-    }
+.class-footer {
+    padding: 30px;
+    text-align: right;
+}
 
+.class-footer h1 {
+    margin-bottom: 15px;
+}
+
+.class-shadow {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.class-shadow img {
+    width: 40px;
+}
+
+/* =========================
+   TABLET (768px - 1024px)
+========================= */
+@media (max-width:1024px) {
+
+    /* Header */
     .class-cont {
-        width: 100%;
-        justify-content: center;
+        padding: 15px;
     }
 
-    .nav-menu {
-        justify-content: center;
-        gap: 8px;
-        padding: 8px;
+    .class-left img {
+        max-width: 250px;
     }
 
+    .class-right h2 {
+        font-size: 38px;
+    }
+
+    /* Hero */
     .class-main {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-        margin: 12px;
-        padding: 0;
+        gap: 10px;
+        padding: 15px;
     }
 
-    .class-img img {
-        width: 100%;
-        height: auto;
-        margin-top: 0;
-        margin-left: 0;
+    .class-question {
+        font-size: 22px;
+    }
+
+    .class-have p {
+        font-size: 22px;
+    }
+
+    .form-group label {
+        width: 70px;
+        font-size: 12px;
+    }
+
+    /* Charged Section */
+    .class-dui,
+    .class-blog,
+    .class-Nawards {
+        flex: 1;
+        min-width: 0;
+        padding: 10px;
+    }
+
+    /* Practice */
+    .class-practice-header {
+        flex: 0 0 25%;
+    }
+
+    .class-page {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .class-client {
+        flex: 0 0 25%;
+    }
+
+    .class-page h1 {
+        font-size: 26px;
+    }
+}
+
+/* =========================
+   MOBILE (481px - 768px)
+========================= */
+@media (max-width:768px) {
+
+    /* Header */
+    .class-cont {
+        padding: 10px;
+    }
+
+    .class-left img {
+        max-width: 180px;
+    }
+
+    .class-right h1 {
+        font-size: 14px;
+    }
+
+    .class-right h2 {
+        font-size: 26px;
+    }
+
+    .class-fast {
+        font-size: 11px;
+    }
+
+    /* Navbar */
+    .nav-menu li a {
+        font-size: 10px;
+        padding: 8px 2px;
+    }
+
+    /* Hero */
+    .class-main {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .class-img {
+        flex: 1;
     }
 
     .class-form {
-        width: 100%;
-        max-width: 100%;
-        margin-top: 0;
-        padding: 14px;
-        height: auto;
-        border-width: 1px;
+        flex: 1;
     }
 
-    .class-form h1 {
-        width: 100%;
-        margin: 0 0 12px 0;
-    }
-
-    .class-formconf {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .class-confiedential {
-        margin-top: 6px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .class-formconf img {
-        transform: none;
-        width: 140px;
-        margin: 0 auto;
-    }
-
-    .class-form input,
-    .class-form textarea {
-        width: 100%;
-    }
-
-    .class-form button {
-        width: 100%;
+    .class-question {
         font-size: 16px;
-        height: 44px;
+        padding: 10px;
     }
 
-    .class-charged {
+    .class-have p {
+        font-size: 16px;
+    }
+
+    .class-enter {
+        font-size: 11px;
+    }
+
+    .form-group {
         flex-direction: column;
-        gap: 12px;
-        padding: 0 6px;
+        align-items: flex-start;
+    }
+
+    .form-group label {
+        width: 100%;
+        margin-bottom: 3px;
+    }
+
+    .class-guranted {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .class-guranted button {
+        width: 100%;
+    }
+
+    /* Charged Section */
+    .class-charged {
+        gap: 8px;
+        overflow-x: hidden;
     }
 
     .class-dui,
     .class-blog,
     .class-Nawards {
-        width: 100%;
-        padding: 12px;
-        margin-left: 0;
-    }
-
-    .blog-item {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .class-blog-item-image {
-        width: 100%;
-        min-width: auto;
-        flex: none;
-    }
-
-    .class-Area {
-        width: 100%;
-        max-width: none;
-        margin-left: 0;
-    }
-
-    .class-client {
-        width: 100%;
-        margin-left: 0;
-        padding: 12px;
-        text-align: center;
-    }
-
-    .class-Sbutton {
-        width: 100%;
-        margin-left: 0;
-        display: block;
-    }
-
-    .class-line {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .class-awardimg {
-        justify-content: center;
-        margin-left: 0;
-    }
-
-    .class-awardb img {
-        margin-left: 0;
-        display: inline-block;
-    }
-
-    .class-footer {
-        padding: 20px;
-        align-items: center;
-        text-align: center;
-    }
-
-    .class-footer h1 {
-        text-align: center;
-    }
-}
-
-@media (max-width: 599px) {
-
-    /* Mobile medium / small phones */
-    .class-logoimg img {
-        width: 110px;
-    }
-
-    .class-contact h2 {
-        font-size: 14px;
-        letter-spacing: 1px;
-    }
-
-    .class-contact h3 {
-        font-size: 24px;
-    }
-
-    .nav-menu a {
-        font-size: 14px;
-        padding: 8px 10px;
-    }
-
-    .class-form h1 {
-        font-size: 18px;
+        flex: 1;
+        min-width: 0;
         padding: 8px;
     }
 
-    .class-form textarea {
-        min-height: 100px;
+    .dui-h1,
+    .class-blog-item-text h1,
+    .class-Nawards h2 {
+        font-size: 16px;
     }
 
-    .class-blog-item-text h1 {
-        font-size: 20px;
+    .class-scary,
+    .class-blog-item-text p,
+    .class-klf {
+        font-size: 11px;
     }
 
-    .class-blog-item-text p {
-        font-size: 14px;
+    /* Practice */
+    .class-practice {
+        gap: 8px;
+        overflow-x: hidden;
     }
 
-    .class-Sbutton {
-        font-size: 12px;
-        padding: 8px 10px;
-        width: 100%;
+    .class-practice-header {
+        flex: 0 0 28%;
+        min-width: 0;
     }
 
-    .class-shadow img {
-        width: 30px;
-        height: 30px;
+    .class-page {
+        flex: 1;
+        min-width: 0;
     }
 
-    .class-awardb img {
-        width: 40px;
-        height: 40px;
-        margin: 0 6px;
-    }
-}
-
-@media (max-width: 399px) {
-
-    /* Extra small */
-    .class-logoimg img {
-        width: 90px;
+    .class-client {
+        flex: 0 0 28%;
+        min-width: 0;
     }
 
-    .class-contact h3 {
-        font-size: 20px;
+    .class-practice-header h1,
+    .class-page h1,
+    .class-client h1 {
+        font-size: 16px;
     }
 
-    .class-contact h2 {
-        font-size: 13px;
+    .class-page p,
+    .class-client p {
+        font-size: 11px;
+        line-height: 1.4;
     }
 
-    .class-form input,
-    .class-form textarea {
-        font-size: 13px;
+    .class-Area {
         padding: 8px;
     }
 
     .class-Area h2 {
-        font-size: 16px;
+        font-size: 11px;
     }
 
+    .class-learn-more {
+        font-size: 9px;
+    }
+
+    .class-Sbutton {
+        font-size: 10px;
+        padding: 6px;
+    }
+}
+
+/* =========================
+   VERY SMALL PHONES (<480px)
+========================= */
+@media (max-width:480px) {
+
+    .class-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+
+    .class-question {
+        font-size: 13px;
+    }
+
+    .class-have p {
+        font-size: 13px;
+    }
+
+    .nav-menu li a {
+        font-size: 8px;
+        padding: 6px 1px;
+    }
+
+    .class-right h2 {
+        font-size: 20px;
+    }
+
+    .class-page p,
+    .class-client p,
+    .class-scary,
+    .class-klf {
+        font-size: 10px;
+    }
+
+    .class-practice-header h1,
+    .class-page h1,
     .class-client h1 {
         font-size: 14px;
     }
 
-    .class-client p {
-        font-size: 12px;
-    }
-
-    .class-line {
-        margin-top: 4px;
-        margin-bottom: 6px;
+    .class-Area h2 {
+        font-size: 10px;
     }
 }
