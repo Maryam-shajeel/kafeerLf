@@ -4,20 +4,14 @@
     box-sizing: border-box;
 }
 
-/* =========================
-   CONTAINER
-========================= */
-/* .site-wrapper {
-    max-width: 1200px;
-    margin: auto;
-    background: #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .15);
-} */
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #f3f3f3;
     color: #333;
+}
+
+.red-elements {
+    color: #650000;
 }
 
 img {
@@ -121,9 +115,6 @@ a {
 }
 
 /* =========================
-   HERO SECTION
-========================= */
-/* =========================
    HERO SECTION (MAIN)
 ========================= */
 /* =========================
@@ -131,52 +122,63 @@ a {
 ========================= */
 .class-main {
     display: flex;
-    /* side by side layout */
     flex-direction: row;
+    align-items: stretch;
     justify-content: space-between;
     align-items: stretch;
-    /* equal height for both sides */
     gap: 20px;
     padding: 20px;
 }
 
+
+
 .class-img,
 .class-form {
-    flex: 0 0 50%;
-    /* equal width halves */
+    flex: 1;
     max-width: 50%;
     box-sizing: border-box;
+    display: flex;
 }
 
 /* Image fills its half completely */
+/* Image fills its half */
 .class-img img {
     width: 100%;
     height: 100%;
-    /* match parent height */
+    /* keep aspect ratio */
     object-fit: cover;
-    /* fill space neatly */
     display: block;
 }
 
-/* Form with background image */
+
+/* Form styling */
 .class-form {
     background: url("images/form_bg.jpg") no-repeat center center;
     background-size: cover;
-    /* scale background to fill */
     border: 1px solid #ccc;
-    padding: 20px;
+    padding: 10px;
     color: #030202;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+.class-que {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
 
 .class-question {
+    display: flex;
+    align-items: center;
     background: #8f0000;
     color: #fff;
-    padding: 15px;
-    font-size: 28px;
+    /* padding: 15px; */
+    font-size: 30px;
+    font-family: italic;
+    max-width: 300px;
+    max-height: 50px;
 }
 
 .class-have {
@@ -184,11 +186,12 @@ a {
 }
 
 .class-have p {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 .blue-ques {
+    font-size: 30px;
     color: #0a346f;
 }
 
@@ -198,7 +201,7 @@ a {
 
 .class-enter {
     margin-bottom: 15px;
-    font-size: 14px;
+    font-size: 25px;
 }
 
 .form-group {
@@ -228,13 +231,14 @@ textarea {
 
 .class-formconf {
     display: flex;
-    justify-content: space-between;
     gap: 20px;
 }
 
 .class-confiedential img {
     transform: rotate(20deg);
-    width: 120px;
+    width: 400%;
+    padding: 20px;
+
 }
 
 .class-guranted {
@@ -245,25 +249,59 @@ textarea {
 }
 
 .class-guranted h2 {
-    font-size: 14px;
+    font-size: 30px;
     color: #777;
     font-style: italic;
 }
 
+
 .class-guranted button {
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     background: #b10000;
     color: #fff;
-    padding: 12px 20px;
-    font-weight: bold;
+    border: none;
+    /* padding: 14px 32px;    padding: 12px 20px; */
+    font-size: 20px;
+    font-style: italic;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-sizing: border-box;
+    /*  Minimum size */
+    min-width: 300px;
+    min-height: 50px;
+}
+
+/* Hover effect */
+.class-guranted button:hover {
+    background: #8b0000;
+}
+
+/* Icon inside button */
+.class-guranted img {
+    width: 10px;
+    height: auto;
 }
 
 /* Responsive tweaks */
 @media (max-width:768px) {
     .class-main {
-        min-height: 60vh;
-        /* shrink height a bit */
-        gap: 8px;
-        padding: 8px;
+        flex-direction: column;
+        /* stack */
+    }
+
+    .class-img,
+    .class-form {
+        max-width: 100%;
+        /* full width each */
+    }
+
+    .class-img img {
+        height: auto;
+        /* prevent squish */
     }
 }
 
@@ -277,13 +315,10 @@ textarea {
 
 @media (max-width:1024px) {
     .class-main {
-        min-height: 60vh;
-        gap: 5px;
-        padding: 10px;
+        gap: 10px;
+        padding: 15px;
     }
 }
-
-
 
 
 /* =========================
@@ -296,11 +331,20 @@ textarea {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    gap: 20px;
-    padding: 20px;
+    gap: 10px;
+    padding: 10px;
     flex-wrap: nowrap;
     font-family: italic;
     /* keep side by side always */
+}
+
+.dui-line h1 {
+    font-size: 25px;
+}
+
+.class-case {
+    font-size: 20px;
+    color: #650000;
 }
 
 /* Each block */
@@ -321,7 +365,7 @@ textarea {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 15px;
+    gap: 10px;
 }
 
 .class-dui .case-line {
@@ -374,68 +418,78 @@ textarea {
 
 /* Buttons */
 /* Charged Section Buttons */
-.class-charged button,
-.class-Sbutton {
+.class-charged button {
     display: inline-flex;
-    /* text + icon side by side */
     align-items: center;
-    /* vertical alignment */
     justify-content: center;
-    /* center text + icon */
     gap: 10px;
-    /* space between text and icon */
     background: #b10000;
-    /* strong red background */
     color: #fff;
-    /* white text */
     border: none;
     padding: 14px 32px;
-    /* large clickable area */
-    font-size: 18px;
+    font-size: 10px;
     font-weight: bold;
-    /* CLICK HERE style */
     cursor: pointer;
     transition: background 0.3s ease;
-    border-radius: 4px;
-    /* slight rounded corners */
     box-sizing: border-box;
-    width: auto;
-    /* desktop: auto width */
+    /*  Minimum size */
+    min-width: 50px;
+    min-height: 10px;
 }
 
 /* Hover effect */
 .class-charged button:hover,
 .class-Sbutton:hover {
     background: #8b0000;
-    /* darker red on hover */
 }
 
 /* Icon inside button */
 .class-charged button img,
 .class-Sbutton img {
-    width: 20px;
-    /* consistent icon size */
+    width: 5px;
     height: auto;
 }
-
-
-/* Icon inside button */
-.class-charged button img,
-.class-Sbutton img {
-    width: 10px;
-    /* consistent icon size */
-    height: auto;
-}
-
 
 /* =========================
    RESPONSIVE (keep side by side)
 ========================= */
+/* Tablet & Mobile: full width buttons */
+@media (max-width:768px) {
+
+    .class-charged button,
+    .class-Sbutton {
+        width: 100%;
+        height: 10%;
+        /* stretch full width */
+        font-size: 12px;
+        padding: 12px 20px;
+        /* keep min size even on mobile */
+        min-width: 20%;
+        min-height: 10%;
+    }
+}
+
+/* Small Mobile */
+@media (max-width:480px) {
+
+    .class-charged button,
+    .class-Sbutton {
+        width: 100%;
+        height: 10%;
+        font-size: 12px;
+        padding: 16px 16px;
+
+        min-width: 50px;
+        min-height: 50px;
+    }
+}
+
+
 
 /* Tablet & Mobile*/
 @media (max-width:1024px) {
     .class-charged {
-        gap: 15px;
+        gap: 10px;
     }
 
     .class-dui .board-line,
@@ -484,39 +538,6 @@ textarea {
     }
 }
 
-/* Tablet & Mobile: full width buttons */
-@media (max-width:768px) {
-
-    .class-charged button,
-    .class-Sbutton {
-        width: 100%;
-        height: 50%;
-        /* stretch full width */
-        font-size: 12px;
-        /* slightly smaller text */
-        padding: 12px 20px;
-    }
-
-    .class-charged button img,
-    .class-Sbutton img {
-        width: 10px;
-    }
-}
-
-/* Small Mobile */
-@media (max-width:480px) {
-
-    .class-charged button,
-    .class-Sbutton {
-        font-size: 14px;
-        padding: 10px 16px;
-    }
-
-    .class-charged button img,
-    .class-Sbutton img {
-        width: 16px;
-    }
-}
 
 
 
@@ -529,13 +550,11 @@ textarea {
     gap: 20px;
     align-items: flex-start;
     padding: 20px;
-    /* overflow-x: auto; */
-    /* keeps 3 columns on small screens */
 }
 
 /* LEFT COLUMN */
 .class-practice-header {
-    flex: 0 0 25%;
+    flex: 0 0 10%;
     min-width: 180px;
 }
 
@@ -562,15 +581,10 @@ textarea {
 /* DUI Section Learn More */
 .class-learn-more {
     display: inline-flex;
-    /* text + icon side by side */
-    align-items: right;
-    /* vertical alignment */
     gap: 6px;
-    /* space between text and icon */
     font-size: 16px;
     font-weight: bold;
     color: #eee2e2;
-    /* red text */
     text-decoration: none;
     cursor: pointer;
 }
@@ -627,8 +641,8 @@ textarea {
 }
 
 .class-client p {
-    font-size: 15px;
-    color: #555;
+    font-size: 20px;
+    color: #0c0c0c;
     margin-bottom: 10px;
 }
 
@@ -640,28 +654,38 @@ textarea {
 }
 
 .class-Sbutton {
-    width: 100%;
-    background: #8b0000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #b10000;
     color: #fff;
     border: none;
-    padding: 10px;
-    font-size: 14px;
+    padding: 14px 32px;
+    font-size: 10px;
+    font-weight: bold;
     cursor: pointer;
-    margin-bottom: 20px;
+    transition: background 0.3s ease;
+    box-sizing: border-box;
+    /*  Minimum size */
+    min-width: 50px;
+    min-height: 10px;
 }
 
+.class-Sbutton {
+    display: flex;
+    align-items: right;
+}
+
+/* Hover effect */
 .class-Sbutton:hover {
-    background: #650000;
+    background: #8b0000;
 }
 
-.class-awardb {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.class-awardb img {
-    max-width: 120px;
-    margin: 10px auto;
+/* Icon inside button */
+.class-Sbutton img {
+    width: 5px;
+    height: auto;
 }
 
 /* =========================
@@ -672,41 +696,51 @@ textarea {
 
     .class-practice {
         gap: 15px;
+
     }
 
     .class-practice-header {
-        flex: 0 0 28%;
-        min-width: 160px;
+        flex: 0 0;
     }
 
     .class-client {
-        flex: 0 0 28%;
-        min-width: 160px;
+        flex: 0 0;
     }
 
     .class-page {
-        min-width: 250px;
+        flex: 0;
     }
 
     .class-page h1 {
-        font-size: 28px;
+        font-size: 15px;
+    }
+
+    .class-practice-header,
+    .class-page,
+    .class-client {
+        width: 100%;
+        /* full width each */
     }
 }
+
+
+
 
 /* =========================
    MOBILE
 ========================= */
 
 @media (max-width:768px) {
-
     .class-practice {
         gap: 10px;
-        overflow-x: auto;
+        /* overflow-x: auto; */
     }
 
     .class-practice-header {
         flex: 0 0 180px;
     }
+
+
 
     .class-page {
         flex: 1;
@@ -730,7 +764,14 @@ textarea {
     }
 
     .class-client p {
-        font-size: 13px;
+        font-size: 15px;
+    }
+
+    .class-practice-header,
+    .class-page,
+    .class-client {
+        width: 100%;
+        /* full width each */
     }
 }
 
@@ -748,12 +789,21 @@ textarea {
         flex: 0 0 160px;
     }
 
+
+
     .class-page {
         min-width: 260px;
     }
 
     .class-client {
         flex: 0 0 160px;
+    }
+
+    .class-practice-header,
+    .class-page,
+    .class-client {
+        width: 100%;
+        /* full width each */
     }
 }
 
@@ -987,7 +1037,7 @@ textarea {
     }
 
     .class-Area h2 {
-        font-size: 11px;
+        font-size: 17px;
     }
 
     .class-learn-more {
