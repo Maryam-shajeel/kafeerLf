@@ -7,6 +7,8 @@
 .nav-brand-container {
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
+    /* makes children equal height */
 }
 
 .nav-logo-wrapper {
@@ -32,6 +34,7 @@
     font-weight: 900;
     letter-spacing: 2px;
     font-family: Arial, Helvetica, sans-serif;
+    text-decoration: overline
 }
 
 .nav-contact-sub {
@@ -48,12 +51,12 @@
     color: rgba(24, 24, 24, 0.616);
 }
 
-.nav-divider-bar {
+/* .nav-divider-bar {
     width: 92%;
     height: 3px;
     background-color: black;
     border-radius: 50px;
-}
+} */
 
 .navbar-links-row {
     display: flex;
@@ -141,6 +144,22 @@
         justify-content: center;
         align-items: center;
     }
+
+    .nav-contact-sub {
+        white-space: nowrap;
+        /* prevents line breaks */
+        overflow: hidden;
+        /* hides overflow  too long */
+        text-overflow: ellipsis;
+    }
+
+    /* .nav-divider-bar {
+        height: 100%;
+        width: 300%;
+        height: 3px;
+        background-color: black;
+        border-radius: 50px;
+    } */
 
     .nav-logo-wrapper {
         width: 100%;
@@ -895,7 +914,7 @@
         justify-content: center;
     }
 
-    .hero-media-column {
+    .hero-media-Lcolumn {
         width: 92%;
     }
 
